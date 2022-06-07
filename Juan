@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperativo</title>
+<style>
+body{
+margin: 0px;
+padding: 0px;
+}
+.opciones{
+display: none;
+}
+</style>
+</head>
+<body>
+<h1>Recuperativo</h1>
+<div id="cuadro">
+<label> Facil<input type="radio" class="seleccion" name="xxx"
+value="1"></label>
+<br>
+<label> Medio<input type="radio" class="seleccion" name="seleccion"
+value="2"></label>
+<br>
+<label> Dificil<input type="radio" class="seleccion" name="seleccion"
+value="3"></label>
+<br>
+<label> Complejo<input type="radio" class="seleccion" name="seleccion"
+value="4"></label>
+<br>
+<input type="button" value="Seleccionar" id="seleccionar">
+</div>
+<div id="1" class="opciones">
+<h2>Examen de la opcion facil</h2>
+<input type="button" class="volver" value="Volver al menu">
+</div>
+<div id="2" class="opciones">
+<h2>Examen de la opcion media</h2>
+<input type="button" class="volver" value="Volver al menu">
+</div>
+<div id="3" class="opciones">
+<h2>Examen de la opcion Dificil</h2>
+<input type="button" class="volver" value="Volver al menu">
+</div>
+<div id="4" class="opciones">
+<h2>Examen de la opcion Complejo</h2>
+<input type="button" class="volver" value="Volver al menu">
+</div>
+<script>
+document.getElementById("seleccion").addEventListener("click",()=>{ 
+var valor;
+valor=document.querySelector('input[name=seleccion]:checked').value;
+if(valor=='1')
+{
+document.getElementById("cuadro").style.display="none";
+document.getElementById("1").style.display="block"; 
+}
+if(valor=='2')
+{
+document.getElementById("cuadro").style.display="none";
+document.getElementById("2").style.display="block"; 
+}
+if(valor=='3')
+{
+document.getElementById("cuadro").style.display="none";
+document.getElementById("3").style.display="block"; 
+}
+if(valor=='4')
+{
+document.getElementById("cuadro").style.display="none";
+document.getElementById("4").style.display="block"; 
+}
+});
+var eventos=document.getElementsByClassName("xxxx");
+for (let index = 0; index < eventos.length; index++) {
+eventos[index].addEventListener("click",()=>{
+document.getElementById("1").style.display="none"; 
+document.getElementById("2").style.display="none"; 
+document.getElementById("3").style.display="none"; 
+document.getElementById("4").style.display="none";
+document.getElementById("cuadro").style.display="block";
+});
+}
+</script>
+</body>
+</html>
